@@ -1,0 +1,23 @@
+spring:
+   datasource:
+      url: jdbc:mysql://localhost:3306/stockmngmnt?createDatabaseIfNotExist=true&useSSL=fasle&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetime=false&serverTimezone=UTC
+      username: root
+      password: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      
+      
+## explicit DBMS Specification
+   jpa:
+      database: MYSQL
+      show-sql: false
+##hibernate DDL auto (create, create-DROP, update)
+
+   hibernate:
+      ddl-auto: create
+   properties: 
+      hibernate:
+         dialect: org.hibernate.dialect.MySAL5Dialect
+         
+
+server:
+   port: 8081

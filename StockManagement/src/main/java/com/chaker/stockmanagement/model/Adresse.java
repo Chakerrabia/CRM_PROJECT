@@ -12,10 +12,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode(callSuper=true)
-
-@Entity
-@Table
+@EqualsAndHashCode
 @Embeddable
 public class Adresse {
 	@Column
@@ -29,5 +26,5 @@ public class Adresse {
 	@Column
 	private String pays;
 
-	
+
 }

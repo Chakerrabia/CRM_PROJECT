@@ -1,15 +1,12 @@
 package com.chaker.stockmanagement.model;
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-
-import java.math.BigDecimal;
 
 @Data
 @NoArgsConstructor
@@ -18,11 +15,8 @@ import java.math.BigDecimal;
 
 @Entity
 @Table
-public class LigneVente extends AbstractEntity{
-
-    @ManyToOne
-    @JoinColumn(name="idvente")
-    private Ventes ventes;
-
-    private BigDecimal qte;
+public class Entreprise extends AbstractEntity{
+    @Column
+    private String nom;
 }
+

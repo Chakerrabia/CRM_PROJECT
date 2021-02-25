@@ -16,5 +16,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table
 public class Ventes extends AbstractEntity{
+    //FIXME
+    private String code;
 
 }

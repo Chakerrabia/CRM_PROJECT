@@ -1,8 +1,8 @@
 spring:
    datasource:
-      url: jdbc:mysql://localhost:3306/stockmngmnt?createDatabaseIfNotExist=true&useSSL=fasle&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetime=false&serverTimezone=UTC
+      url: jdbc:mysql://localhost:3306/stockmngmnt?createDatabaseIfNotExist=true&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetime=false&serverTimezone=UTC
       username: root
-      password: root
+      password:
       driver-class-name: com.mysql.cj.jdbc.Driver
       
       

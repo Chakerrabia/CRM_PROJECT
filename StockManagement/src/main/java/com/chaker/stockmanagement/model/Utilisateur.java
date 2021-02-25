@@ -17,4 +17,6 @@ import lombok.NoArgsConstructor;
 @Table
 public class Utilisateur extends AbstractEntity{
 
+    private String nom;
+
 }

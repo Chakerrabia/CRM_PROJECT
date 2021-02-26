@@ -15,15 +15,15 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode
 @Embeddable
 public class Adresse {
-	@Column
+	@Column(name = "adresse1")
 	private String adresse1;
-	@Column
+	@Column(name = "adresse2")
 	private String adresse2;
-	@Column
+	@Column(name = "ville")
 	private String ville;
-	@Column
+	@Column(name = "codePostale")
 	private String codePostale;
-	@Column
+	@Column(name = "pays")
 	private String pays;
 
 

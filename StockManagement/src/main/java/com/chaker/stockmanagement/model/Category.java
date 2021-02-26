@@ -16,15 +16,16 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper=true)
 @Entity
-@Table
+@Table(name = "category")
+
 public class Category extends AbstractEntity{
 
-	@Column
+	@Column(name = "code")
 	private String code;
-	@Column
+	@Column(name = "designation")
 	private String designation;
 	
-	@OneToMany(mappedBy = "categoty")
+	@OneToMany(mappedBy = "category")
 	private List<Article> listeArticles;
 	
 }

@@ -17,25 +17,25 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper=true)
 @Entity
-@Table
+@Table(name = "client")
 public class Client extends AbstractEntity{
 	
-		@Column
+		@Column(name = "nom")
 		private String nom ;
 		
-		@Column
+		@Column(name = "prenom")
 		private String prenom ;
 		
 		@Embedded
 		private Adresse adresse ;
 		
-		@Column
+		@Column(name = "photo")
 		private String photo ;
 		
-		@Column
+		@Column(name = "mail")
 		private String mail ;
 		
-		@Column
+		@Column(name = "numTel")
 		private String numTel ;
 		
 		@OneToMany(mappedBy = "client")

@@ -1,4 +1,5 @@
 package com.chaker.stockmanagement.model;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -13,8 +14,8 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper=true)
 
 @Entity
-@Table
+@Table(name = "roles")
 public class Roles extends AbstractEntity{
-
+    @Column(name = "nom")
     private String nom;
 }

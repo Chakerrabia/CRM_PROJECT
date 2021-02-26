@@ -20,12 +20,12 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper=true)
 
 @Entity
-@Table
+@Table(name ="commandeClient")
 public class CommandeClient extends AbstractEntity{
 	
-	@Column
+	@Column(name = "code")
 	private String code;
-	@Column 
+	@Column(name = "dateCommande")
 	private Instant dateCommande;
 	
 	@OneToMany(mappedBy = "commandeClient")

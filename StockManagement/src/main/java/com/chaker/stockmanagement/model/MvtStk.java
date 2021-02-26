@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper=true)
 
 @Entity
-@Table
+@Table(name ="mvtStk" )
 public class MvtStk extends AbstractEntity{
     @ManyToOne
     @JoinColumn(name= "idArticle")

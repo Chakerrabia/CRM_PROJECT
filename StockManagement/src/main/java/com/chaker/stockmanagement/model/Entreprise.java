@@ -14,9 +14,9 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper=true)
 
 @Entity
-@Table
+@Table(name = "entreprise")
 public class Entreprise extends AbstractEntity{
-    @Column
+    @Column(name = "nom")
     private String nom;
 }
 

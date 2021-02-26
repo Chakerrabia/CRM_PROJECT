@@ -20,11 +20,11 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper=true)
 
 @Entity
-@Table
+@Table(name = "commandeFournisseur")
 public class CommandeFournisseur extends AbstractEntity{
-	@Column
+	@Column(name = "code")
 	public String code;
-	@Column
+	@Column(name = "dateCommande")
 	public Instant dateCommande;
 	
 	@ManyToOne
@@ -32,7 +32,7 @@ public class CommandeFournisseur extends AbstractEntity{
 	private Fournisseur fournisseur;
 	
 	
-	@OneToMany(mappedBy = "CommandeFournisseur")
+	@OneToMany(mappedBy = "commandeFournisseurs")
 	private List<LigneCommandeFournisseur> ligneCommandeFournisseur;
 	
 	

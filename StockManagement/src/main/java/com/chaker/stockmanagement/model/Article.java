@@ -18,17 +18,18 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper=true)
 @Entity
-@Table
+@Table(name = "article")
 public class Article extends AbstractEntity{
-	@Column	
+
+	@Column(name = "codeArticle")
 	private String codeArticle;
-	@Column
+	@Column(name = "designation")
 	private String designation;
-	@Column
+	@Column(name = "prixUnitaireHt")
 	private BigDecimal prixUnitaireHt;
-	@Column
+	@Column(name = "prixUnitaireTtc")
 	private BigDecimal prixUnitaireTtc;
-	@Column
+	@Column(name = "photo")
 	private String photo; 
 	@ManyToOne
 	@JoinColumn(name="idcategory")

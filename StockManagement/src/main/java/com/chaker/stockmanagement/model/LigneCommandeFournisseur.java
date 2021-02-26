@@ -9,7 +9,6 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -17,7 +16,7 @@ import java.util.List;
 @EqualsAndHashCode(callSuper=true)
 
 @Entity
-@Table
+@Table(name = "ligneCommandeFournisseur")
 public class LigneCommandeFournisseur extends AbstractEntity {
     @ManyToOne
     @JoinColumn(name= "idArticle")

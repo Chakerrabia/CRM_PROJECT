@@ -1,5 +1,6 @@
 package com.chaker.stockmanagement.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -14,9 +15,10 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper=true)
 
 @Entity
-@Table
+@Table(name = "ventes")
 public class Ventes extends AbstractEntity{
     //FIXME
+    @Column(name="code")
     private String code;
 
 }

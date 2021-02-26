@@ -17,7 +17,7 @@ import java.math.BigDecimal;
 @EqualsAndHashCode(callSuper=true)
 
 @Entity
-@Table
+@Table(name = "ligneVente")
 public class LigneVente extends AbstractEntity{
 
     @ManyToOne

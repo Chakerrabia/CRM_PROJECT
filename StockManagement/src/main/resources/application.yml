@@ -12,12 +12,13 @@ spring:
       show-sql: false
 ##hibernate DDL auto (create, create-DROP, update)
 
-   hibernate:
-      ddl-auto: create
-   properties: 
       hibernate:
-         dialect: org.hibernate.dialect.MySAL5Dialect
-         
+         ddl-auto: create
+      properties:
+         hibernate:
+            dialect: org.hibernate.dialect.MySQLDialect
+
+
 
 server:
    port: 8081

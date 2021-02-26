@@ -1,16 +1,13 @@
 package com.chaker.stockmanagement.model;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
+import java.math.BigDecimal;
 
 
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper=true)
@@ -25,4 +22,10 @@ public class LigneCommandeFournisseur extends AbstractEntity {
     @ManyToOne
     @JoinColumn(name= "idCommandeFournisseur")
     private CommandeFournisseur commandeFournisseurs;
+
+    @Column(name = "quantite")
+    private BigDecimal quantite;
+
+    @Column(name = "prixunitaire")
+    private BigDecimal prixUnitaire;
 }

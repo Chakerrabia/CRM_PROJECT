@@ -1,17 +1,13 @@
 package com.chaker.stockmanagement.model;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import com.chaker.stockmanagement.dto.VentesDto;
+import lombok.*;
 
 import java.math.BigDecimal;
 
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper=true)
@@ -24,5 +20,9 @@ public class LigneVente extends AbstractEntity{
     @JoinColumn(name="idvente")
     private Ventes ventes;
 
-    private BigDecimal qte;
+    @Column(name = "quantity" )
+    private BigDecimal quantity;
+
+    @Column(name = "prixunitaire" )
+    private BigDecimal prixUnitaire;
 }

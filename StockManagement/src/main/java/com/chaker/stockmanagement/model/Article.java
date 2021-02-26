@@ -23,14 +23,19 @@ public class Article extends AbstractEntity{
 
 	@Column(name = "codeArticle")
 	private String codeArticle;
+
 	@Column(name = "designation")
 	private String designation;
+
 	@Column(name = "prixUnitaireHt")
 	private BigDecimal prixUnitaireHt;
+
 	@Column(name = "prixUnitaireTtc")
 	private BigDecimal prixUnitaireTtc;
+
 	@Column(name = "photo")
-	private String photo; 
+	private String photo;
+
 	@ManyToOne
 	@JoinColumn(name="idcategory")
 	private Category category;

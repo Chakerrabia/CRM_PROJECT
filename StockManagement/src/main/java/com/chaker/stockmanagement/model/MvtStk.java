@@ -17,6 +17,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name ="mvtStk" )
 public class MvtStk extends AbstractEntity{
+
     @ManyToOne
     @JoinColumn(name= "idArticle")
     private Article article;
